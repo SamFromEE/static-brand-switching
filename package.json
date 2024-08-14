@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build-brand1": "rm -rf src/active-brand && ln -s $(pwd)/src/brands/brand1 src/active-brand && next build",
+    "build-brand2": "rm -rf src/active-brand && ln -s $(pwd)/src/brands/brand2 src/active-brand && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "use-brand1": "rm -rf src/active-brand && ln -s $(pwd)/src/brands/brand1/ src/active-brand",
+    "use-brand2": "rm -rf src/active-brand && ln -s $(pwd)/src/brands/brand2/ src/active-brand"
   },
   "dependencies": {
     "react": "^18",
